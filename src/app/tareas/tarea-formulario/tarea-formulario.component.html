@@ -1,0 +1,18 @@
+<StackLayout class="page">
+
+    <Label
+        text="Agregar nueva tarea"
+        class="titulo">
+    </Label>
+
+    <TextField
+        hint="Escribe el nombre de tu tarea"
+        [(ngModel)]="nombre">
+    </TextField>
+
+    <Button
+        text="Guardar tarea"
+        (tap)="guardarTarea()">
+    </Button>
+
+</StackLayout>
