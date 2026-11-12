@@ -1,18 +1,39 @@
-<StackLayout class="page">
+<ScrollView>
+    <StackLayout class="page">
 
-    <Label
-        text="Agregar nueva tarea"
-        class="titulo">
-    </Label>
+        <Label
+            text="Nueva tarea"
+            class="titulo">
+        </Label>
 
-    <TextField
-        hint="Escribe el nombre de tu tarea"
-        [(ngModel)]="nombre">
-    </TextField>
+        <Label
+            text="Agrega una actividad a tu lista."
+            class="subtitulo">
+        </Label>
 
-    <Button
-        text="Guardar tarea"
-        (tap)="guardarTarea()">
-    </Button>
+        <TextField
+            hint="Escribe el nombre de tu tarea"
+            [(ngModel)]="nombre"
+            class="campo-texto">
+        </TextField>
 
-</StackLayout>
+        <Label
+            *ngIf="mensajeError"
+            [text]="mensajeError"
+            class="mensaje-error">
+        </Label>
+
+        <Button
+            text="Guardar tarea"
+            class="boton-principal"
+            (tap)="guardarTarea()">
+        </Button>
+
+        <Button
+            text="Cancelar"
+            class="boton-secundario"
+            (tap)="cancelar()">
+        </Button>
+
+    </StackLayout>
+</ScrollView>

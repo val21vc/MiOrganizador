@@ -1,16 +1,72 @@
-<StackLayout class="page">
+<ScrollView>
+    <StackLayout class="page">
 
-    <Label
-        text="Agregar nueva tarea"
-        class="titulo">
-    </Label>
+        <Label
+            text="MiOrganizador"
+            class="titulo">
+        </Label>
 
-    <TextField
-        hint="Escribe el nombre de tu tarea">
-    </TextField>
+        <Label
+            text="Organiza tus actividades"
+            class="subtitulo">
+        </Label>
 
-    <Button
-        text="Guardar tarea">
-    </Button>
+        <Label
+            *ngIf="mensajeAndroid"
+            [text]="mensajeAndroid"
+            class="mensaje-android">
+        </Label>
 
-</StackLayout>
+        <Button
+            text="+ Agregar tarea"
+            class="boton-principal"
+            (tap)="abrirFormulario()">
+        </Button>
+
+        <Label
+            text="Mis tareas"
+            class="titulo-seccion">
+        </Label>
+
+        <StackLayout
+            *ngFor="let tarea of tareas"
+            class="tarjeta">
+
+            <Label
+                [text]="tarea.nombre"
+                class="nombre-tarea">
+            </Label>
+
+            <Label
+                [text]="tarea.completada ? 'Completada' : 'Pendiente'"
+                class="estado-tarea">
+            </Label>
+
+            <GridLayout columns="*, *">
+
+                <Button
+                    col="0"
+                    [text]="tarea.completada ? 'Reabrir' : 'Completar'"
+                    class="boton-secundario"
+                    (tap)="cambiarEstado(tarea)">
+                </Button>
+
+                <Button
+                    col="1"
+                    text="Eliminar"
+                    class="boton-eliminar"
+                    (tap)="eliminarTarea(tarea)">
+                </Button>
+
+            </GridLayout>
+
+        </StackLayout>
+
+        <Label
+            *ngIf="tareas.length === 0"
+            text="Todavía no tienes tareas registradas."
+            class="subtitulo">
+        </Label>
+
+    </StackLayout>
+</ScrollView>

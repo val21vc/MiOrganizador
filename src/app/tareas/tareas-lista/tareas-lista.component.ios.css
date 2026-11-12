@@ -1,0 +1,16 @@
+@import './tareas-lista.component.css';
+
+.page {
+    padding: 22;
+}
+
+.tarjeta {
+    border-radius: 16;
+    border-width: 1;
+    border-color: #E8EEE2;
+}
+
+.boton-principal {
+    border-radius: 14;
+    font-size: 17;
+}

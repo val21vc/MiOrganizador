@@ -1,0 +1,14 @@
+@import './tareas-lista.component.css';
+
+.page {
+    padding: 16;
+}
+
+.tarjeta {
+    border-radius: 10;
+}
+
+.boton-principal {
+    border-radius: 8;
+    font-size: 16;
+}

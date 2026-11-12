@@ -1,0 +1,78 @@
+.page {
+    background-color: #F5F1E7;
+    padding: 18;
+}
+
+.titulo {
+    color: #4A5A3A;
+    font-size: 25;
+    font-weight: bold;
+    text-align: center;
+    margin: 10;
+}
+
+.subtitulo {
+    color: #6A8A64;
+    font-size: 15;
+    text-align: center;
+    margin: 8;
+}
+
+.titulo-seccion {
+    color: #4A5A3A;
+    font-size: 20;
+    font-weight: bold;
+    margin-top: 20;
+    margin-bottom: 10;
+}
+
+.tarjeta {
+    background-color: #FFFFFF;
+    padding: 15;
+    margin: 8;
+    border-radius: 12;
+}
+
+.nombre-tarea {
+    color: #4A5A3A;
+    font-size: 17;
+    font-weight: bold;
+}
+
+.estado-tarea {
+    color: #D99A6C;
+    font-size: 13;
+    margin-top: 5;
+}
+
+.completada {
+    color: #557050;
+}
+
+.boton-principal {
+    background-color: #4A5A3A;
+    color: #FFFFFF;
+    border-radius: 10;
+    margin: 10;
+}
+
+.boton-secundario {
+    background-color: #6A8A64;
+    color: #FFFFFF;
+    border-radius: 8;
+    font-size: 13;
+}
+
+.boton-eliminar {
+    background-color: #D99A6C;
+    color: #FFFFFF;
+    border-radius: 8;
+    font-size: 13;
+}
+
+.mensaje-android {
+    color: #557050;
+    font-size: 13;
+    text-align: center;
+    margin: 8;
+}
